@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'casket'
+
+def parse_options args
+  options = Hash.new
+  if args.include? "--build"
+    options[:build] = true
+  else
+     
+    if args.first == "--no-bundle"
+      options[:no_bundle] = true
+      args.shift
+    end
+    options[:path] = args.first
+  end
+  options
+end
+
+options = parse_options(ARGV)
+casket = Casket.new
+
+if options[:build]
+  casket.pack Dir.pwd
+  puts "[in #{Dir.pwd}]"
+  puts "  Package created!"
+else
+  if options[:path].nil?
+    puts "Usage:"
+    puts "  casket [--no-bundle] PATH"
+    puts "  casket --build"
+    puts
+    puts "Options:"
+    puts "  --no-bundle   Do not check dependencies while executing."
+    puts "  --build       Build package from current directory"
+    puts
+  else
+    unless options[:no_bundle]
+      casket.unpack options[:path]
+      casket.bundle
+      casket.rake
+      casket.close
+    else
+      casket.unpack options[:path]
+      casket.rake
+      casket.close
+    end
+  end
+end

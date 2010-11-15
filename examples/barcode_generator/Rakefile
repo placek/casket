@@ -1,0 +1,8 @@
+require File.expand_path(File.dirname(__FILE__) + '/generator.rb')
+
+task :launch_application do
+  puts "Type data for barcode:"
+  Barcode.create_barcode gets
+end
+
+task :default => :launch_application

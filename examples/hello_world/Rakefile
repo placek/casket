@@ -1,0 +1,5 @@
+task :launch_application do
+  require 'hello_world.rb'
+end
+
+task :default => :launch_application
