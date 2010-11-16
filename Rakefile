@@ -4,7 +4,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   gem.name = "casket"
-  gem.homepage = "placek.github.com/casket/"
+  gem.homepage = "http://placek.github.com/casket/"
   gem.license = "MIT"
   gem.summary = "Packaging project for Ruby similar to JAR for Java"
   gem.description = "Packaging project for Ruby similar to JAR for Java"
