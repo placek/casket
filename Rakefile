@@ -4,13 +4,13 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   gem.name = "casket"
-  gem.homepage = "http://github.com/placek/casket"
+  gem.homepage = "placek.github.com/casket/"
   gem.license = "MIT"
   gem.summary = "Packaging project for Ruby similar to JAR for Java"
   gem.description = "Packaging project for Ruby similar to JAR for Java"
   gem.email = "placek@ragnarson.com"
   gem.authors = ["Paweł Placzyński"]
-  gem.add_development_dependency 'rspec', '> 1.3.0'
+  gem.add_development_dependency 'rspec', '>= 1.3.0' 
   gem.add_development_dependency "jeweler", ">= 1.4.0"
 end
 Jeweler::RubygemsDotOrgTasks.new

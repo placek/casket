@@ -33,6 +33,8 @@ To make your application self-executive create rake task to initialize applicati
 
   task :default => :launch_application  # bind task to default one
 
+For more examples please check https://github.com/placek/casket/tree/master/examples/.
+
 === Creating deployment package
 
 To create Casket package simply go to your application directory and type:
