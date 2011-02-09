@@ -49,7 +49,7 @@ Tu run Casket project type:
 
   $ casket <path to casket package>
 
-If you dont want to check dependences type:
+If you don't want to check dependences type:
 
   $ casket --no-bundle <path to casket package>
 
